@@ -1,37 +1,29 @@
 <template>
-    <div>
-        <input type="text" placeholder="오늘 할 일을 입력하세요.">
-        <button id="inputbutton">입력</button>
-    </div>
+    <input class="input" type="text" v-molel="todoInput" placeholder="오늘 할 일을 입력하세요.">
 </template>
 
 <script>
 export default {
     methods:{
-        addTodo(){
-
+        todoInput(){
+            return{
+                todoInput:'',
+            }
         }
     }
+    //dataa (){ return{}} 요거랑 차이가 뭔가용
     }
 </script>
 
 <style lang="scss">
-    input{
+    .input{
+        display: inline-block;
         background-color:#fff9f9;
-        width:300px;
-        height:40px;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        
-    }
-    button{
-        height:48px;
-        width: 60px;
-        text-align: center;
-        border-radius: 5px;
+        width:400px;
+        height:50px;
         border:none;
-        background-color:#ffcece;
+        border-bottom: solid 2px #5c5c5c;
+        border-radius: 5px;
+        
     }
 </style>
