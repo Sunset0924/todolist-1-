@@ -13,7 +13,6 @@
 </template>
 
 <script>
-require ('@/components/reset.css')
 import TodoHeader from '@/components/TodoHeader.vue'
 import TodoInput from '@/components/TodoInput.vue'
 import TodoButton from '@/components/TodoButton.vue'
