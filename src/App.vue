@@ -31,4 +31,6 @@ export default {
 </script>
 
 <style lang="scss">
+// css file import는 style tag 안에서! 
+@import url('./style/reset.css');
 </style>
