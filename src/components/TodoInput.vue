@@ -1,18 +1,18 @@
 <template>
-    <input class="input" type="text" v-molel="todoInput" placeholder="오늘 할 일을 입력하세요.">
+  <input class="input" type="text" v-molel="todoInput" placeholder="오늘 할 일을 입력하세요.">
 </template>
 
 <script>
 export default {
-    methods:{
-        todoInput(){
-            return{
-                todoInput:'',
-            }
-        }
+  methods:{
+    todoInput () {
+      return {
+        todoInput:'',
+      }
     }
+  }
     //dataa (){ return{}} 요거랑 차이가 뭔가용
-    }
+}
 </script>
 
 <style lang="scss">
