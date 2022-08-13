@@ -1,7 +1,7 @@
 <template>
     <div>
         <input class="input" type="text" placeholder="오늘 할 일을 입력하세요.">
-        <TodoButton v-bind:whatTodo = "todoInput" />
+        <TodoButton @clickAddBtn="addTodo" />
     </div>
 
 </template>
@@ -10,17 +10,14 @@
 import TodoButton from '@/components/TodoButton.vue'
 
 export default {
-    components:{
+    components: {
         TodoButton
     },
-    methods:{
-        todoInput(){
-            return{
-                todoInput:'',
-            },
+    methods: {
+        // methods는 동사 형태로 작성을 권장
+        addTodo () {
             console.log('test')
         }
-    //dataa (){ return{}} 요거랑 차이가 뭔가용
 }
 }
 </script>

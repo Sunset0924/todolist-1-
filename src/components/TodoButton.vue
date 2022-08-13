@@ -1,5 +1,7 @@
 <template>
-  <button class="button" @click="addTodo">추가</button>
+  <div>
+    <button class="button" @click="addTodo">추가</button>
+  </div>
 </template>
 
 <script>
@@ -12,8 +14,7 @@ export default {
     methods:{
         addTodo: function(){
             alert ("할일이 추가되었습니다.")
-            console.log()
-            this.$emit('clickAddBtn',this.testInput)
+            this.$emit('clickAddBtn')
         }
     },
     props:{
