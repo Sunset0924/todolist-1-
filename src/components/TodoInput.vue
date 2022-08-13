@@ -1,14 +1,24 @@
 <template>
-    <input class="input" type="text" v-molel="todoInput" placeholder="오늘 할 일을 입력하세요.">
+    <div>
+        <input class="input" type="text" placeholder="오늘 할 일을 입력하세요.">
+        <TodoButton v-bind:whatTodo = "todoInput" />
+    </div>
+
 </template>
 
 <script>
+import TodoButton from '@/components/TodoButton.vue'
+
 export default {
+    components:{
+        TodoButton
+    },
     methods:{
         todoInput(){
             return{
                 todoInput:'',
-            }
+            },
+            console.log('test')
         }
     }
     //dataa (){ return{}} 요거랑 차이가 뭔가용

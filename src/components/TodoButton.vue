@@ -4,9 +4,22 @@
 
 <script>
 export default {
+    data(){
+        return{
+            testInput:'테스트 값'
+        }
+    },
     methods:{
         addTodo: function(){
             alert ("할일이 추가되었습니다.")
+            console.log()
+            this.$emit('clickAddBtn',this.testInput)
+        }
+    },
+    props:{
+        whatTodo:{
+            type:String,
+            default:'할일'
         }
     }
 }
