@@ -20,9 +20,15 @@ export default {
             },
             console.log('test')
         }
+  methods:{
+    todoInput () {
+      return {
+        todoInput:'',
+      }
     }
+  }
     //dataa (){ return{}} 요거랑 차이가 뭔가용
-    }
+}
 </script>
 
 <style lang="scss">

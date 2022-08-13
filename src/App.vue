@@ -12,7 +12,6 @@
 </template>
 
 <script>
-require ('@/components/reset.css')
 import TodoHeader from '@/components/TodoHeader.vue'
 import TodoInput from '@/components/TodoInput.vue'
 import TodoItem from '@/components/TodoItem.vue'
@@ -29,4 +28,6 @@ export default {
 </script>
 
 <style lang="scss">
+// css file import는 style tag 안에서! 
+@import url('./style/reset.css');
 </style>

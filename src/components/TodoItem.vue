@@ -1,17 +1,17 @@
 <template>
-    <div>
-        {{number}}. {{whattodo}}
-    </div>
+  <div>
+    {{number}}. {{whattodo}}
+  </div>
 </template>
 
 <script>
 export default{
-    data(){
-        return{
-        number: 1,
-        whattodo:'숙제하기'
-        }
+  data () {
+    return {
+      number: 1,
+      whattodo:'숙제하기'
     }
+  }
 }
 </script>
 

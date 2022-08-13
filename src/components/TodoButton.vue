@@ -1,5 +1,5 @@
 <template>
-        <button class="button" @click="addTodo">추가</button>
+  <button class="button" @click="addTodo">추가</button>
 </template>
 
 <script>
@@ -22,18 +22,19 @@ export default {
             default:'할일'
         }
     }
-}
+  }
+
 </script>
 
 <style lang="scss">
-    .button{
-        display: inline-block;
-        height:50px;
-        width: 50px;
-        text-align: center;
-        border-radius: 5px;
-        border:none;
-        margin:2px;
-        background-color:#ffcece;
-    }
+.button{
+    display: inline-block;
+    height:50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
+    border:none;
+    margin:2px;
+    background-color:#ffcece;
+}
 </style>
