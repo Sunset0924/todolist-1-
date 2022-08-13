@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input class="input" type="text" placeholder="오늘 할 일을 입력하세요.">
+        <input class="input" v-model="newTodoItem" type="text" placeholder="오늘 할 일을 입력하세요.">
         <TodoButton @clickAddBtn="addTodo" />
     </div>
 
@@ -10,13 +10,19 @@
 import TodoButton from '@/components/TodoButton.vue'
 
 export default {
+    data(){
+        return{
+            newTodoItem:""
+        }
+    },
     components: {
         TodoButton
     },
     methods: {
         // methods는 동사 형태로 작성을 권장
         addTodo () {
-            console.log('test')
+            console.log(this.newTodoItem)
+            this.newTodoItem=''
         }
 }
 }
