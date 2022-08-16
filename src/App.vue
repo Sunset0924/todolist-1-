@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <TodoHeader />
-    <TodoInput />
-    <TodoItem />
+    <TodoInput @click="addItem"/>
+    <TodoItem v-for="(todo,k) in items.lenght" :key="k"/>
     <!-- <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -22,6 +22,17 @@ export default {
     TodoHeader,
     TodoInput,
     TodoItem
+  },
+  data(){
+    return{
+      items:[],
+    }
+  },
+  methods:{
+    addItem(todo){
+      console.log(todo)
+      this.items.push(todo)
+    }
   }
 }
 

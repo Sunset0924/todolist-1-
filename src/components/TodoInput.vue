@@ -21,7 +21,7 @@ export default {
     methods: {
         // methods는 동사 형태로 작성을 권장
         addTodo () {
-            console.log(this.newTodoItem)
+            this.$emit('click', this.newTodoItem)
             this.newTodoItem=''
         }
 }
