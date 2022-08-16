@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="button">
     <button class="button" @click="addTodo">추가</button>
   </div>
 </template>
@@ -13,16 +13,16 @@ export default {
     },
     methods:{
         addTodo: function(){
-            alert ("할일이 추가되었습니다.")
+            // alert ("할일이 추가되었습니다.")
             this.$emit('clickAddBtn')
         }
     },
-    props:{
-        whatTodo:{
-            type:String,
-            default:'할일'
-        }
-    }
+    // props:{
+    //     whatTodo:{
+    //         type:String,
+    //         default:'할일'
+    //     }
+    // }
   }
 </script>
 

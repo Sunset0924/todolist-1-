@@ -2,7 +2,7 @@
   <div id="app">
     <TodoHeader />
     <TodoInput @click="addItem"/>
-    <TodoItem v-for="(todo,k) in items.lenght" :key="k"/>
+    <TodoItem v-for="(item, k) in items" :key="k" :todo="item"/>
     <!-- <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -26,12 +26,13 @@ export default {
   data(){
     return{
       items:[],
+      title:'To do list'
     }
   },
   methods:{
-    addItem(todo){
-      console.log(todo)
-      this.items.push(todo)
+    addItem(data){
+      console.log(data)
+      this.items.push(data)
     }
   }
 }

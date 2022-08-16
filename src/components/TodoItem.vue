@@ -1,6 +1,8 @@
 <template>
-  <div>
-    {{number}}. {{whattodo}}
+  <div class="todo-item-list">
+    <div class="todo-item">
+    {{todo}}
+    </div>
   </div>
 </template>
 
@@ -8,8 +10,12 @@
 export default{
   data () {
     return {
-      number: 1,
-      whattodo:'숙제하기'
+    }
+  },
+  props:{
+    todo:{
+      type:String,
+      default:''
     }
   }
 }
