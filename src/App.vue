@@ -2,7 +2,7 @@
   <div id="app">
     <TodoHeader />
     <TodoInput @click="addItem"/>
-    <TodoItem v-for="(item, k) in items" :key="k" :todo="item"/>
+    <TodoItem v-for="(item, k) in items" :key="k" :todo="item" :keydata="k"/>
     <!-- <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -26,14 +26,23 @@ export default {
   data(){
     return{
       items:[],
-      title:'To do list'
+      title:'To do list',
+      // tmp:{
+      //   no: this.num,
+      //   data: this.items
+      // },
+      // num:1,
     }
   },
   methods:{
     addItem(data){
       console.log(data)
       this.items.push(data)
-    }
+      // this.num++
+      // console.log(this.num)
+      // console.log(Object.assign({}, this.items))
+      // console.log(this.testobject)
+      }
   }
 }
 
