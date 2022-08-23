@@ -27,6 +27,7 @@ export default {
     return{
       items:[],
       title:'To do list',
+      indexNum: 1
       // tmp:{
       //   no: this.num,
       //   data: this.items
@@ -36,12 +37,14 @@ export default {
   },
   methods:{
     addItem(data){
-      console.log(data)
-      this.items.push(data)
-      // this.num++
-      // console.log(this.num)
-      // console.log(Object.assign({}, this.items))
-      // console.log(this.testobject)
+      // tmp object 생성
+      let tmpObj = {
+        idx: this.indexNum,
+        todoItem: data
+      }
+      this.items.push(tmpObj)
+      console.log(tmpObj)
+      this.indexNum++
       }
   }
 }

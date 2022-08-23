@@ -1,7 +1,7 @@
 <template>
   <div class="todo-item-list">
     <div class="todo-item">
-      {{keydata+1}}. {{todo}}
+      {{todo.idx}}. {{todo.todoItem}}
       <button class="delete-button" @click="deleteTodo">삭제</button>
     </div>
   </div>
@@ -15,7 +15,7 @@ export default{
   },
   props:{
     todo:{
-      type:String,
+      type:Object,
       default:()=>{}
     },
     keydata:{
