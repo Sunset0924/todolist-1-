@@ -2,7 +2,7 @@
   <div id="app">
     <TodoHeader />
     <TodoInput @click="addItem"/>
-    <TodoItem v-for="(item, k) in items" :key="k" :todo="item" :keydata="k"/>
+    <TodoItem v-for="(item, k) in items" :key="k" :todo="item" :index="k" @delete="deleteItem"/>
     <!-- <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -38,14 +38,20 @@ export default {
   methods:{
     addItem(data){
       // tmp object 생성
-      let tmpObj = {
+      const tmpObj = {
         idx: this.indexNum,
         todoItem: data
       }
       this.items.push(tmpObj)
       console.log(tmpObj)
       this.indexNum++
-      }
+      },
+    deleteItem(data){
+      console.log(data)
+      const tmp = this.items.filter(item => item.idx !== data)
+      console.log('필터링한 배열 나오는지', tmp)
+      this.items = tmp
+    }
   }
 }
 

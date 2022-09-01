@@ -1,7 +1,7 @@
 <template>
   <div class="todo-item-list">
     <div class="todo-item">
-      {{todo.idx}}. {{todo.todoItem}}
+      {{index+1}}. {{todo.todoItem}}
       <button class="delete-button" @click="deleteTodo">삭제</button>
     </div>
   </div>
@@ -18,7 +18,7 @@ export default{
       type:Object,
       default:()=>{}
     },
-    keydata:{
+    index:{
       type:Number,
       default:0
     }
@@ -28,7 +28,8 @@ export default{
       console.log(this.keydata)
     },
     deleteTodo(){
-      console.log('delete', this.keydata)
+      console.log('delete', this.todo.idx)
+      this.$emit('delete',this.todo.idx)
     }
 }
 }
