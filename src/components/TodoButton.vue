@@ -35,6 +35,7 @@ export default {
     border-radius: 5px;
     border:none;
     margin:2px;
-    background-color:#ffcece;
+    background-color:#fe8a2d;
+    color:white;
 }
 </style>

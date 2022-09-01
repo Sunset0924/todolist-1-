@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img rel="mojo" src="https://item.kakaocdn.net/do/64099a747f647ba7891d5d343d0c7aa38f324a0b9c48f77dbce3a43bd11ce785">
+    <img rel="mojo" src="https://item.kakaocdn.net/do/d660ac6c5065dd1481e3e962eed7fab0617ea012db208c18f6e83b1a90a7baa7">
     <h1>ToDo it!</h1>
   </div>    
 </template>
