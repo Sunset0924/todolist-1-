@@ -35,6 +35,17 @@ export default {
       // num:1,
     }
   },
+  created(){
+
+  },
+  mounted(){
+    const todoItem = window.localStorage.getItem('todoItem')
+    // 만약 todoItem이 null인 경우 item에도 ㅡ*null이 들어감. Null에는 push를 할 수 없음. 배열에만 가능.
+    if(todoItem !== null){
+      this.items = JSON.parse(todoItem)
+    }
+
+  },
   methods:{
     addItem(data){
       // tmp object 생성
@@ -45,12 +56,17 @@ export default {
       this.items.push(tmpObj)
       console.log(tmpObj)
       this.indexNum++
+      // items => 객체 배열
+      window.localStorage.setItem('todoItem',JSON.stringify(this.items))
+
       },
     deleteItem(data){
       console.log(data)
       const tmp = this.items.filter(item => item.idx !== data)
       console.log('필터링한 배열 나오는지', tmp)
-      this.items = tmp
+      this.items = tmp //삭제된 배열을 아래에서 local storage에 다시 저장
+      window.localStorage.setItem('todoItem',JSON.stringify(this.items))
+
     }
   }
 }
