@@ -40,7 +40,7 @@ export default {
   },
   mounted(){
     const todoItem = window.localStorage.getItem('todoItem')
-    // 만약 todoItem이 null인 경우 item에도 ㅡ*null이 들어감. Null에는 push를 할 수 없음. 배열에만 가능.
+    // 만약 todoItem이 null인 경우 item에도 ㅡ*null이 들어감. Null에는 push를 할 수 없음. 배열에만 가능. push는 배열에만 사용
     if(todoItem !== null){
       this.items = JSON.parse(todoItem)
     }
@@ -73,7 +73,13 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="scss"> //scoped를 지정해야 해당 클래스에만 적용됨
+#app{
+  width: 500px;
+  height: 700px;
+  padding: 20px;
+  background-color:#deeeff;
+}
 // css file import는 style tag 안에서! 
 @import url('./style/reset.css');
 </style>

@@ -32,7 +32,7 @@ export default {
     .input{
         display: inline-block;
         background-color:#fff9f9;
-        width:400px;
+        width: 430px;
         height:50px;
         border:none;
         border-bottom: solid 2px #5c5c5c;
