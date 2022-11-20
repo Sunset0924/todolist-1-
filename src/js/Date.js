@@ -2,7 +2,7 @@ export default class Date{
     constructor() {
         // 이 클래스가 생성될 때 자동으로 셋팅되는 값들
         // 초기화
-        this.dateArray = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'Octobor', 'November', 'December']
+        this.dateArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         this.dayArray = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     }
 
@@ -24,10 +24,16 @@ export default class Date{
 
     }
 
-    // dateFormatter (today){
-    //     let month = this.dateArray[today.getMonth()]
-    //     let date = today.getDate()
-    //     return month + ',' + date + 'th'
+    dateFormatter (today){
+        let date = today.getDate()
+        let month = this.dateArray[today.getMonth()]
+        return month + ',' + date + 'th'
+        // return month + ',' + date + 'th' +',' + day
+    }
+
+    // dayFormatter (today){
+    //     let day = this.dayArray[today.getDay()]
+    //     return day
     // }
 
 
