@@ -16,8 +16,8 @@ export default {
 
   data(){
     return{
-      dateOfToday:'100'
-      // dayOfToday:''
+      dateOfToday:'100',
+      dayOfToday:''
     }
   },
   created(){
@@ -25,9 +25,8 @@ export default {
     // let today2 = new Date()
     // today에 Date 객체를 넣음
     let dateOfToday = this.$date.dateFormatter(today)
-    // let dayOfToday = this.$date.dayFormatter(today2)
-    console.log('[TodoHeader.vue] created', dateOfToday)
-    // console.log('[TodoHeader.vue] created', dayOfToday)
+    let dayOfToday = this.$date.getDay(today)
+    console.log('[TodoHeader.vue] created', dateOfToday, ',', dayOfToday)
 
     // let dd = this.$date.dateFormatter(today)
     // console.log(dd)
