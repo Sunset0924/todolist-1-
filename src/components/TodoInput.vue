@@ -29,14 +29,22 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('../style/reset.css');
+
+    // .container{
+    //     display: inline-block;
+    //     width:500px;
+    // }
     .input{
         display: inline-block;
-        background-color:#fff9f9;
-        width: 430px;
+        background-color:#fff;
+        width: 440px;
+        box-sizing: border-box;
+        padding:20px;
         height:50px;
         border:none;
-        border-bottom: solid 2px #5c5c5c;
-        border-radius: 5px;
+        border-bottom: solid 0.5pt #b9b9b9;
+        
         
     }
 </style>

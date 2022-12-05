@@ -2,7 +2,7 @@
   <div class="todo-item-list">
     <div class="todo-item">
       {{index+1}}. {{todo.todoItem}}
-      <button class="delete-button" @click="deleteTodo">삭제</button>
+      <button class="delete-button" @click="deleteTodo">DEL</button>
     </div>
   </div>
 </template>
@@ -36,9 +36,15 @@ export default{
 </script>
 
 <style lang="scss">
+.todo-item{
+  background-color: #fff;
+  padding:20px;
+}
   .delete-button{
-    color:rgb(133, 133, 133);
+    color:rgb(255, 255, 255);
+    background-color:rgb(211, 206, 198);
     border:none;
+    font-size:10px;
   }
 
 </style>

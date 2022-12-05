@@ -78,7 +78,7 @@ export default {
   width: 500px;
   height: 700px;
   padding: 20px;
-  background-color:#deeeff;
+  background-color:#c1e9de;
 }
 // css file import는 style tag 안에서! 
 @import url('./style/reset.css');

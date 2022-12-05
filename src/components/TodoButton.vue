@@ -1,5 +1,5 @@
 <template>
-  <div class="button">
+  <div class="container">
     <button class="button" @click="addTodo">추가</button>
   </div>
 </template>
@@ -27,15 +27,19 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('../style/reset.css');
+.container{
+  display:inline-block;
+}
 .button{
     display: inline-block;
     height:50px;
-    width: 50px;
-    text-align: center;
-    border-radius: 5px;
+    width:60px;
+    box-sizing: border-box;
+    // text-align: center;
     border:none;
-    margin:2px;
-    background-color:#4944d0;
+    background-color:#947a74;
     color:white;
+    padding:0;
 }
 </style>
